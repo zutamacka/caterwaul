@@ -46,16 +46,17 @@ const actions = {
         console.log(error.message);
       });
   },
+  logOutUser() {
+    firebaseAuth.signOut();
+  },
   /* triggers when app starts  */
   handleAuthStateChanged({ commit }) {
     firebaseAuth.onAuthStateChanged(user => {
       if (user) {
         // User is logged in.
         let userId = firebaseAuth.currentUser.uid;
-        console.log("user= " + userId);
         firebaseDb.ref("users/" + userId).once("value", snapshot => {
           let userDetails = snapshot.val();
-          console.log(userDetails);
           commit("setUserDetails", {
             name: userDetails.name,
             email: userDetails.email,
@@ -63,7 +64,8 @@ const actions = {
           });
         });
       } else {
-        // User is logged out.
+        // User is logged out. Send an empty object to prep for a new user.
+        commit("setUserDetails", {});
       }
     });
   }

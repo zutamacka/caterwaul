@@ -11,3 +11,17 @@
     </template>
   </q-img>
 </template>
+
+<script>
+import { mapState } from "vuex";
+
+export default {
+  data() {
+    return {};
+  },
+  methods: {},
+  computed: {
+    ...mapState(["userDetails"])
+  }
+};
+</script>

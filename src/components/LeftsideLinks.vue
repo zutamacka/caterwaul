@@ -20,19 +20,15 @@
       </q-item>
 
       <q-separator />
-      <q-item clickable v-ripple to="/login" exact>
-        <q-item-section avatar>
-          <q-icon name="fas fa-sign-out-alt" size="md" />
-        </q-item-section>
-
-        <q-item-section class="h6 text-weight-bolder">Login</q-item-section>
-      </q-item>
+      <login-button />
     </q-list>
   </div>
 </template>
 
 <script>
+import LoginButton from "./LoginButton.vue";
 export default {
+  components: { LoginButton },
   name: "LeftsideLinks"
 };
 </script>
