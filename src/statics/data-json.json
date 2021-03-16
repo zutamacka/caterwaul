@@ -1,0 +1,35 @@
+{
+    "users":{
+      "USERID1":{
+        "name": "Ginger",
+        "email": "Ginger@caterwaul.com",
+        "online":true
+      },
+      "USERID2":{
+        "name": "Titi",
+        "email": "Titi@caterwaul.com",
+        "online":true
+      }
+    },
+    "caterwauls": {
+      "CWAULID1": {
+        "content": "Evil hissy pisses on you",
+        "date": 1615796251229,
+        "likes": 11,
+        "userId": "USERID1"
+      },
+      "CWAULID2":{
+        "content": "I wil piss on your window.",
+        "date": 1615763262416,
+        "likes": 0,
+        "userId": "USERID2"
+      },
+      "CWAULID3":{
+        "content": "My hatred is for all that is good.",
+        "date": 1615828872657,
+        "likes": 2,
+        "userId": "USERID2"
+      }
+    }
+
+}
