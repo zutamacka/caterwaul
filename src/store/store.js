@@ -63,9 +63,11 @@ const actions = {
             userId: userId
           });
         });
+        this.$router.push("/");
       } else {
         // User is logged out. Send an empty object to prep for a new user.
         commit("setUserDetails", {});
+        this.$router.replace("/login");
       }
     });
   }

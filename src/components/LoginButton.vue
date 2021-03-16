@@ -15,9 +15,9 @@
         <span class="text-weight-bold q-px-sm">{{ userDetails.name }}</span>
       </div>
 
-      <q-item clickable v-ripple to="/" exact>
+      <q-item clickable v-ripple to="/" exact @click="logOutUser">
         <q-item-section avatar>
-          <q-icon name="fas fa-sign-in-alt" size="md" @click="logOutUser" />
+          <q-icon name="fas fa-sign-in-alt" size="md" />
         </q-item-section>
         <q-item-section class="h6 text-weight-bolder">Log Out</q-item-section>
       </q-item>
