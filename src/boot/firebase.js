@@ -5,13 +5,13 @@ import "firebase/database";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDz9FpyMdcKBF2QoCrHCGeVpVEifG8X__8",
-  authDomain: "caterwaul-8098f.firebaseapp.com",
-  databaseURL: "https://caterwaul-8098f-default-rtdb.firebaseio.com",
-  projectId: "caterwaul-8098f",
-  storageBucket: "caterwaul-8098f.appspot.com",
-  messagingSenderId: "1015425442854",
-  appId: "1:1015425442854:web:25cd21f4821d58965772e7"
+  apiKey: "set_up_your_own_firebase_app",
+  authDomain: "set_up_your_own_firebase_app",
+  databaseURL: "set_up_your_own_firebase_app",
+  projectId: "set_up_your_own_firebase_app",
+  storageBucket: "set_up_your_own_firebase_app",
+  messagingSenderId: "set_up_your_own_firebase_app",
+  appId: "set_up_your_own_firebase_app"
 };
 
 //firebaseApp.initializeApp(firebaseConfig);
