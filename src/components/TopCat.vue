@@ -13,15 +13,10 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
   data() {
     return {};
   },
-  methods: {},
-  computed: {
-    ...mapState(["userDetails"])
-  }
+  methods: {}
 };
 </script>

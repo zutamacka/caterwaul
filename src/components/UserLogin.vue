@@ -61,19 +61,11 @@ export default {
     submitForm() {
       if (this.tab === "Login") {
         console.log("Login The user");
-        console.log(this.formData);
         this.loginUser(this.formData);
-        this.clearForm();
       } else if (this.tab === "Register") {
         console.log("Register The user");
         this.registerUser(this.formData);
-        this.clearForm();
       }
-    },
-    clearForm() {
-      this.formData.uname = "";
-      this.formData.email = "";
-      this.formData.password = "";
     }
   }
 };
