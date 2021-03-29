@@ -3,11 +3,13 @@
     <q-scroll-area class="absolute full-height full-width">
       <!-- header cat -->
       <top-cat />
+      <div hidden>{{ $route.params.otherUserId }}</div>
+      <single-user :user="otherUser" />
+      <h6>These are my caterwauls.</h6>
 
       <!-- input section -->
-      <create-caterwaul />
       <q-separator size="11px" color="searchback" class="caterwaul-main-sep" />
-      <caterwauls :posts="posts" />
+      <caterwauls :posts="othersPosts" />
     </q-scroll-area>
   </q-page>
 </template>
@@ -15,13 +17,20 @@
 <script>
 import TopCat from '../components/TopCat.vue'
 import Caterwauls from '../components/Caterwauls.vue'
-import CreateCaterwaul from 'src/components/CreateCaterwaul.vue'
-import { mapGetters } from 'vuex'
+import SingleUser from '../components/SingleUser.vue'
+import { mapGetters, mapActions, mapState } from 'vuex'
 export default {
-  components: { TopCat, Caterwauls, CreateCaterwaul },
+  components: { TopCat, Caterwauls, SingleUser },
   name: 'Home',
+  methods: {
+    ...mapActions('store', ['firebaseGetOthersPosts'])
+  },
+  updated() {
+    this.firebaseGetOthersPosts(this.$route.params.otherUserId)
+  },
   computed: {
-    ...mapGetters('store', ['posts'])
+    ...mapGetters('store', ['othersPosts']),
+    ...mapState('store', ['otherUser'])
   }
 }
 </script>

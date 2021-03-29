@@ -76,18 +76,18 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import SingleUser from "./SingleUser";
+import { mapGetters } from 'vuex'
+import SingleUser from './SingleUser'
 export default {
   components: { SingleUser },
-  name: "NewsFeed",
+  name: 'NewsFeed',
   methods: {
     logOut() {
-      console.log(this.users);
+      console.log(this.users)
     }
   },
   computed: {
-    ...mapGetters("store", ["users"])
+    ...mapGetters('store', ['users'])
   }
-};
+}
 </script>

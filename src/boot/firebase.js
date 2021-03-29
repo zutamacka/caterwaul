@@ -5,13 +5,13 @@ import "firebase/database";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "set_up_your_own_firebase_app",
-  authDomain: "set_up_your_own_firebase_app",
-  databaseURL: "set_up_your_own_firebase_app",
-  projectId: "set_up_your_own_firebase_app",
-  storageBucket: "set_up_your_own_firebase_app",
-  messagingSenderId: "set_up_your_own_firebase_app",
-  appId: "set_up_your_own_firebase_app"
+  apiKey: "insert_your_own_data",
+  authDomain: "insert_your_own_data",
+  databaseURL: "insert_your_own_data",
+  projectId: "insert_your_own_data",
+  storageBucket: "insert_your_own_data",
+  messagingSenderId: "insert_your_own_data",
+  appId: "insert_your_own_data",
 };
 
 //firebaseApp.initializeApp(firebaseConfig);

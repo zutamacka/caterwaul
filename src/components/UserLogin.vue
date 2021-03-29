@@ -41,34 +41,34 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex'
 export default {
-  name: "UserLogin",
+  name: 'UserLogin',
   props: {
     tab: String
   },
   data() {
     return {
       formData: {
-        uname: "",
-        email: "",
-        password: ""
+        uname: '',
+        email: '',
+        password: ''
       }
-    };
+    }
   },
   methods: {
-    ...mapActions("store", ["registerUser", "loginUser"]),
+    ...mapActions('store', ['registerUser', 'loginUser']),
     submitForm() {
-      if (this.tab === "Login") {
-        console.log("Login The user");
-        this.loginUser(this.formData);
-      } else if (this.tab === "Register") {
-        console.log("Register The user");
-        this.registerUser(this.formData);
+      if (this.tab === 'Login') {
+        console.log('Login The user')
+        this.loginUser(this.formData)
+      } else if (this.tab === 'Register') {
+        console.log('Register The user')
+        this.registerUser(this.formData)
       }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped></style>

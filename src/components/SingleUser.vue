@@ -20,19 +20,19 @@
 
 <script>
 export default {
-  name: "SingleUser",
+  name: 'SingleUser',
   props: {
     user: Object
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     goToProfile() {
-      console.log(this.user);
+      this.$router.push('/user/' + this.$vnode.key)
     }
   }
-};
+}
 </script>
 
 <style lang="sass" scoped>

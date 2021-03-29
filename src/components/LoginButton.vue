@@ -26,15 +26,15 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState, mapActions } from 'vuex'
 export default {
   computed: {
-    ...mapState("store", ["userDetails"])
+    ...mapState('store', ['userDetails'])
   },
   methods: {
-    ...mapActions("store", ["logOutUser"])
+    ...mapActions('store', ['logOutUser'])
   }
-};
+}
 </script>
 
 <style lang="sass" scoped></style>

@@ -1,18 +1,23 @@
 const routes = [
   {
-    path: "/",
-    component: () => import("layouts/MainLayout.vue"),
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: "", component: () => import("src/pages/Home.vue"), name: "Home" },
+      { path: '', component: () => import('src/pages/Home.vue'), name: 'Home' },
       {
-        path: "/about",
-        component: () => import("src/pages/About.vue"),
-        name: "About"
+        path: '/about',
+        component: () => import('src/pages/About.vue'),
+        name: 'About'
       },
       {
-        path: "/login",
-        component: () => import("src/pages/Login.vue"),
-        name: "Login"
+        path: '/login',
+        component: () => import('src/pages/Login.vue'),
+        name: 'Login'
+      },
+      {
+        path: '/user/:otherUserId',
+        component: () => import('src/pages/UserCaterwauls.vue'),
+        name: 'User'
       }
     ]
   },
@@ -20,9 +25,9 @@ const routes = [
   // Always leave this as last one,
   // but you can also remove it
   {
-    path: "*",
-    component: () => import("pages/Error404.vue")
+    path: '*',
+    component: () => import('pages/Error404.vue')
   }
-];
+]
 
-export default routes;
+export default routes
